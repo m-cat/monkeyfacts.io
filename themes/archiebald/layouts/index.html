@@ -4,16 +4,17 @@
 	<body>
 		<div class="content">
 			{{ partial "head.html" . }}
+
+			{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 			
 			<main class="list">
 				<div class="site-description">
 					{{- if isset .Site.Params "subtitle" -}}
-					<p>{{ .Site.Params.Subtitle | markdownify }}</p>
+					<p><b>{{ len $pages }} facts</b> and counting!</p>
 					{{- end -}}
 				</div>
 
                 <ul class="posts">
-				    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
 				    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 				    {{ range $paginator.Pages }}
 		            <li class="post">

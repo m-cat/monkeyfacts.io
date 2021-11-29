@@ -5,7 +5,7 @@
     --fg: #232333;
     --red: red;
     --purple: rebeccapurple;
-    --blue: #376dc1;
+    --blue: #0065e8;
     --dark-blue: #0c0cb7;
     --light-purple: #eef;
     --green: #3cac82;
@@ -63,7 +63,8 @@ p {
 hr {
     border: 0;
     border-top: 3px dotted var(--purple);
-    margin: 1em 0;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 blockquote {
@@ -74,7 +75,7 @@ blockquote {
 }
 
 a {
-    color: var(--dark-blue);
+    color: var(--blue);
     border-radius: 5px;
     text-decoration: none;
 }
@@ -162,7 +163,7 @@ header .main {
 
 .page-link {
     color: var(--fg);
-    border: 2px solid var(--blue);
+    border: 2px solid var(--dark-blue);
     padding: 2px 5px;
 }
 
@@ -177,7 +178,7 @@ footer {
 
 /* Common */
 .site-title {
-    color: var(--blue);
+    color: var(--dark-blue);
 }
 
 .title h1 {
@@ -219,6 +220,10 @@ article .title {
     justify-content: space-between;
 }
 
+.post-tags {
+    /* margin-left: 1em; */
+}
+
 .tag {
     color: var(--green);
     padding: 2px 5px;
@@ -236,6 +241,10 @@ article .title {
 
 svg {
     max-height: 15px;
+}
+
+.soc {
+    color: var(--dark-blue);
 }
 
 .soc:hover {
