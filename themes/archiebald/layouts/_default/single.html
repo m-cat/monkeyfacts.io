@@ -21,13 +21,9 @@
 		<div class="post-tags">
 			{{ if ne .Type "page" }}
 			{{ if gt .Params.tags 0 }}
-			<nav class="nav tags">
-				<ul class="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</nav>
+			{{ range .Params.tags }}
+			<a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+			{{ end }}
 			{{ end }}
 			{{ end }}
 		</div>
