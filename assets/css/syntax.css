@@ -1,0 +1,296 @@
+/**
+ * Define colors
+ */
+/**
+ * Syntax highlighting styles
+ */
+
+/* Background */ .chroma { color: #aab0ab; background-color: #1a1a1a }
+
+.chroma .hll {
+  background-color: #112b47; }
+
+/* Line highlight */
+.chroma .lineno {
+  color: #608079; }
+
+/* Line numbers */
+.chroma .lnt {
+  color: #608079; }
+
+/* Comment */
+.chroma .err {
+  color: #9d2512; }
+
+/* Error */
+.chroma .g {
+  color: #bdbdb3; }
+
+/* Generic */
+.chroma .k {
+  color: #5180b3; }
+
+/* Keyword */
+.chroma .l {
+  color: #ab75c3; }
+
+/* Literal */
+.chroma .n {
+  color: #ab75c3; }
+
+/* Name */
+.chroma .o {
+  color: #bdbdb3; }
+
+/* Operator */
+.chroma .x {
+  color: #ab75c3; }
+
+/* Other */
+.chroma .p {
+  color: #bdbdb3; }
+
+/* Punctuation */
+.chroma .cm {
+  color: #757575; }
+
+/* Comment.Multiline */
+.chroma .cp {
+  color: #baba36; }
+
+/* Comment.Preproc */
+.chroma .c1 {
+  color: #757575; }
+
+/* Comment.Single */
+.chroma .cs {
+  color: #baba36; }
+
+/* Comment.Special */
+.chroma .gd {
+  color: #6aaf50; }
+
+/* Generic.Deleted */
+.chroma .ge {
+  color: #bdbdb3;
+  font-style: italic; }
+
+/* Generic.Emph */
+.chroma .gr {
+  color: #d65946; }
+
+/* Generic.Error */
+.chroma .gh {
+  color: #ab75c3; }
+
+/* Generic.Heading */
+.chroma .gi {
+  color: #baba36; }
+
+/* Generic.Inserted */
+.chroma .go {
+  color: #bdbdb3; }
+
+/* Generic.Output */
+.chroma .gp {
+  color: #bdbdb3; }
+
+/* Generic.Prompt */
+.chroma .gs {
+  color: #bdbdb3; }
+
+/* Generic.Strong */
+.chroma .gu {
+  color: #ab75c3; }
+
+/* Generic.Subheading */
+.chroma .gt {
+  color: #bdbdb3; }
+
+/* Generic.Traceback */
+.chroma .kc {
+  color: #ab75c3; }
+
+/* Keyword.Constant */
+.chroma .kd {
+  color: #5180b3; }
+
+/* Keyword.Declaration */
+.chroma .kn {
+  color: #baba36; }
+
+/* Keyword.Namespace */
+.chroma .kp {
+  color: #baba36; }
+
+/* Keyword.Pseudo */
+.chroma .kr {
+  color: #5180b3; }
+
+/* Keyword.Reserved */
+.chroma .kt {
+  color: #d65946; }
+
+/* Keyword.Type */
+.chroma .ld {
+  color: #bdbdb3; }
+
+/* Literal.Date */
+.chroma .m {
+  color: #df9522; }
+
+/* Literal.Number */
+.chroma .s {
+  color: #6aaf50; }
+
+/* Literal.String */
+.chroma .na {
+  color: #6aaf50; }
+
+/* Name.Attribute */
+.chroma .nb {
+  color: #5180b3; }
+
+/* Name.Builtin */
+.chroma .nc {
+  color: #1d9a79; }
+
+/* Name.Class */
+.chroma .nd {
+  color: #1d9a79; }
+
+/* Name.Decorator */
+.chroma .ne {
+  color: #ab75c3; }
+
+/* Name.Exception */
+.chroma .nf {
+  color: #1d9a79; }
+
+/* Name.Function */
+.chroma .ni {
+  color: #df9522; }
+
+/* Name.Entity */
+.chroma .nl {
+  color: #baba36; }
+
+/* Name.Label */
+.chroma .nn {
+  color: #bdbdb3; }
+
+/* Name.Namespace */
+.chroma .no {
+  color: #ab75c3; }
+
+/* Name.Constant */
+.chroma .nt {
+  color: #5180b3; }
+
+/* Name.Tag */
+.chroma .nv {
+  color: #5180b3; }
+
+/* Name.Variable */
+.chroma .ow {
+  color: #baba36; }
+
+/* Operator.Word */
+.chroma .nx {
+  color: #1d9a79; }
+
+/* Name.Other */
+.chroma .w {
+  color: #bdbdb3; }
+
+/* Text.Whitespace */
+.chroma .mf {
+  color: #df9522; }
+
+/* Literal.Number.Float */
+.chroma .mh {
+  color: #df9522; }
+
+/* Literal.Number.Hex */
+.chroma .mi {
+  color: #df9522; }
+
+/* Literal.Number.Integer */
+.chroma .mo {
+  color: #df9522; }
+
+/* Literal.Number.Oct */
+.chroma .py {
+  color: #baba36; }
+
+/* Name.Property */
+.chroma .sb {
+  color: #ab75c3; }
+
+/* Literal.String.Backtick */
+.chroma .sc {
+  color: #6aaf50; }
+
+/* Literal.String.Char */
+.chroma .sd {
+  color: #bdbdb3; }
+
+/* Literal.String.Doc */
+.chroma .s2 {
+  color: #6aaf50; }
+
+/* Literal.String.Double */
+.chroma .se {
+  color: #ab75c3; }
+
+/* Literal.String.Escape */
+.chroma .sh {
+  color: #bdbdb3; }
+
+/* Literal.String.Heredoc */
+.chroma .si {
+  color: #6aaf50; }
+
+/* Literal.String.Interpol */
+.chroma .sx {
+  color: #6aaf50; }
+
+/* Literal.String.Other */
+.chroma .sr {
+  color: #d65946; }
+
+/* Literal.String.Regex */
+.chroma .s1 {
+  color: #6aaf50; }
+
+/* Literal.String.Single */
+.chroma .ss {
+  color: #6aaf50; }
+
+/* Literal.String.Symbol */
+.chroma .bp {
+  color: #5180b3; }
+
+/* Name.Builtin.Pseudo */
+.chroma .vc {
+  color: #5180b3; }
+
+/* Name.Variable.Class */
+.chroma .vg {
+  color: #5180b3; }
+
+/* Name.Variable.Global */
+.chroma .vi {
+  color: #5180b3; }
+
+/* Name.Variable.Instance */
+.chroma .vm {
+  color: #5180b3; }
+
+/* Name.Variable.Magic */
+.chroma .il {
+  color: #6aaf50; }
+
+/* Literal.Number.Integer.Long */
+
+/*# sourceMappingURL=nimbus-pygments.css.map */

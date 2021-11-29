@@ -1,0 +1,12 @@
+---
+title: "Magit: How to Cherrypick"
+date: 2021-11-19
+tags:
+  - emacs
+  - magit
+  - shortcuts
+---
+
+In magit you can cherry-pick (apply a commit from another branch to the current
+branch) by logging the other branch, putting the point on a commit and typing `A
+A`.

@@ -1,3 +1,66 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://monkeyfacts.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Monkey Facts'
+theme = "archie"
+copyright = "© Marcin S."
+
+paginate = 20 # articles per page
+rssLimit = 100
+
+[params]
+	mode = "light" # color-mode → light,dark,toggle or auto
+	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
+	subtitle = '"Monkey See, Monkey Do"'
+	customcss = ["css/syntax.css"]
+
+# Footer links
+
+[[params.social]]
+name = "Blog"
+icon = "user"
+url = "https://bytedude.com"
+
+[[params.social]]
+name = "Email"
+icon = "mail"
+url = "mailto:marcin@bytedude.com"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/m-cat"
+
+[[params.social]]
+name = "rss"
+icon = "rss"
+url = "/index.xml"
+
+# Main menu Items
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All Posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
+
+# Other config
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    # lineNos = true
+
