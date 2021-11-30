@@ -148,11 +148,21 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1em 0;
+    margin: 1em 0 0 0;
 }
 
 header .main {
     font-size: 1.5rem;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+}
+
+.main a {
+    color: var(--dark-blue);
+}
+
+.main a:hover {
+    color: #fff;
 }
 
 .meta {
@@ -177,9 +187,6 @@ footer {
 }
 
 /* Common */
-.site-title {
-    color: var(--dark-blue);
-}
 
 .title h1 {
     margin-bottom: 0;
@@ -226,7 +233,7 @@ article .title {
 
 .tag {
     color: var(--green);
-    padding: 2px 5px;
+    margin: 2px 5px;
     letter-spacing: -0.5px;
     /* font-size: 0.8em; */
 }
