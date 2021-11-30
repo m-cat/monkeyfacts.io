@@ -251,6 +251,11 @@ svg {
     color: white;
 }
 
+.keep-together {
+    display: inline-block;
+    word-break: keep-all;
+}
+
 .draft-label {
     color: var(--purple);
     text-decoration: none;
