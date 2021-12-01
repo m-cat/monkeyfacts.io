@@ -250,7 +250,11 @@ article .title {
 }
 
 svg {
-    max-height: 15px;
+    max-height: 24px;
+}
+
+.feather {
+    max-height: 14px;
 }
 
 .soc {

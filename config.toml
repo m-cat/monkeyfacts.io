@@ -12,6 +12,7 @@ rssLimit = 100
 	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
 	subtitle = '"Monkey See, Monkey Do"'
 	customcss = ["css/syntax.css"]
+    favicon = "favicon.ico"
 
 # Footer links
 
