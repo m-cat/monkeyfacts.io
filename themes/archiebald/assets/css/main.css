@@ -6,6 +6,7 @@
     --red: red;
     --purple: rebeccapurple;
     --blue: #0065e8;
+    --yellow: #fffb00;
     --dark-blue: #0c0cb7;
     --light-purple: #eef;
     --green: #3cac82;
@@ -13,6 +14,7 @@
     --nimbus-bg: #1a1a1a;
     --nimbus-lightest-green: #8fbc8f;
     --nimbus-blue-bg: #112b47;
+    --nimbus-green-bg: #11472b;
 }
 
 html {
@@ -32,8 +34,8 @@ body {
 }
 
 ::selection {
-    background: var(--red);
-    color: #fff;
+    background: var(--yellow);
+    color: var(--fg);
 }
 
 h1 {
@@ -294,7 +296,7 @@ pre {
 }
 
 .highlight pre ::selection {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--nimbus-green-bg);
     color: inherit;
 }
 
