@@ -20,7 +20,7 @@
 html {
     color: var(--fg);
     font-family: 'Roboto Mono', monospace;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.6em;
 }
 
@@ -155,9 +155,8 @@ header {
 }
 
 header .main {
-    width: 250px;
-    font-size: 1.5rem;
-    margin-right: 1em;
+    font-size: 1.75rem;
+    margin-right: 2em;
     margin-bottom: 0.5em;
 }
 
@@ -248,10 +247,6 @@ article .title {
 
 .tag::after {
     content: "]";
-}
-
-svg {
-    max-height: 24px;
 }
 
 .feather {
