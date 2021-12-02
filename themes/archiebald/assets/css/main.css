@@ -2,6 +2,7 @@
 :root {
     --spacing-unit: 30px;
     --spacing-unit-x2: 60px;
+    --white: white;
     --fg: #232333;
     --red: red;
     --purple: rebeccapurple;
@@ -45,8 +46,8 @@ body {
 }
 
 ::selection {
-    background: var(--yellow);
-    color: var(--fg);
+    background: var(--green);
+    color: var(--white);
 }
 
 h1 {
@@ -95,8 +96,8 @@ a {
 }
 
 a:hover {
-    background-color: var(--dark-blue);
-    color: #fff;
+    background-color: var(--yellow);
+    color: var(--fg);
 }
 
 ul {
@@ -178,7 +179,7 @@ header .main {
 }
 
 .main a:hover {
-    color: #fff;
+    color: var(--fg);
 }
 
 .meta {
@@ -271,7 +272,7 @@ article .title {
 }
 
 .soc:hover {
-    color: white;
+    color: var(--fg);
 }
 
 .keep-together {
