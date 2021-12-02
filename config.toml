@@ -4,7 +4,7 @@ title = 'Monkey Facts'
 theme = "archiebald"
 copyright = "© Marcin S."
 
-paginate = 15 # articles per page
+paginate = 10 # articles per page
 rssLimit = 100
 
 [params]
