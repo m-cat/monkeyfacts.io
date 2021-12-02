@@ -1,6 +1,6 @@
 <header>
 	<div class="main">
-		<a href="{{ .Site.BaseURL }}">{{ readFile "static/images/monkey.svg" | safeHTML }} {{ .Site.Title }}</a>
+	  <a href="{{ .Site.BaseURL }}"><span class="no-hover" >{{ readFile "static/images/monkey.svg" | safeHTML }}</span><span class="only-hover" >{{ readFile "static/images/monkey2.svg" | safeHTML }}</span>{{ .Site.Title }}</a>
 	</div>
 	<nav>
 		{{ range .Site.Menus.main }}

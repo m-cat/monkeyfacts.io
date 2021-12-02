@@ -25,13 +25,18 @@ html {
     line-height: 1.6em;
 }
 
+.monkey {
+    width:  24px;
+    height: 24px;
+}
+
 @media screen and (max-width: 600px) {
     html {
         font-size: 15px;
     }
 
     .monkey {
-        width: 21px;
+        width:  21px;
         height: 21px;
     }
 }
@@ -148,6 +153,20 @@ figure h4 {
 
 figure h4::before {
     content: '↳ ';
+}
+
+/* Hover Effects */
+
+a:hover .no-hover {
+    display: none;
+}
+
+.only-hover {
+    display: none;
+}
+
+a:hover .only-hover {
+    display: initial;
 }
 
 /* Containers */
