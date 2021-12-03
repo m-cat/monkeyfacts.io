@@ -6,4 +6,4 @@ build:
     hugo
 
 test: build
-	loch
+	# loch
