@@ -149,7 +149,7 @@
 
 /* Name.Attribute */
 .chroma .nb {
-    color: #5180b3; }
+    color: var(--nimbus-red); }
 
 /* Name.Builtin */
 .chroma .nc {

@@ -4,16 +4,18 @@
     --spacing-unit-x2: 60px;
     --white: white;
     --fg: #232333;
-    --red: red;
+    --red: #e83903;
     --purple: rebeccapurple;
     --blue: #0065e8;
-    --yellow: #fffb00;
     --dark-blue: #0c0cb7;
+    --yellow: #fffb00;
     --light-purple: #eef;
     --green: #3cac82;
     --gray: #828282;
     --nimbus-bg: #1a1a1a;
     --nimbus-lightest-green: #8fbc8f;
+    --nimbus-red: #d65946;
+    --nimbus-yellow: #baba36;
     --nimbus-blue-bg: #112b47;
     --nimbus-green-bg: #11472b;
 }
@@ -26,6 +28,7 @@ html {
 }
 
 .monkey {
+    color: var(--purple);
     width:  24px;
     height: 24px;
 }
@@ -292,6 +295,10 @@ article .title {
 
 .soc:hover {
     color: var(--fg);
+}
+
+.feather {
+    color: var(--purple);
 }
 
 .keep-together {
