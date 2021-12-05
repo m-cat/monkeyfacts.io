@@ -2,15 +2,19 @@
 :root {
     --spacing-unit: 30px;
     --spacing-unit-x2: 60px;
+    --h1-size: 2rem;
+    --h2-size: 1.6rem;
+    --h3-size: 1.2rem;
     --white: white;
     --fg: #232333;
     --red: #e83903;
     --purple: rebeccapurple;
     --blue: #0065e8;
     --dark-blue: #0c0cb7;
-    --yellow: #fffb00;
+    --yellow: #fdfa41;
     --light-purple: #eef;
     --green: #3cac82;
+    --light-gray: #999;
     --gray: #828282;
     --nimbus-bg: #1a1a1a;
     --nimbus-lightest-green: #8fbc8f;
@@ -59,18 +63,18 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: var(--h1-size);
     margin-top: 1em;
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: var(--h2-size);
     margin-top: 1em;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: var(--h3-size);
     margin-top: 2em;
 }
 
@@ -88,6 +92,11 @@ hr {
     border-top: 3px dotted var(--purple);
     margin-top: 3em;
     margin-bottom: 1em;
+}
+
+.short-hr {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 blockquote {
@@ -111,7 +120,6 @@ a:hover {
 ul {
     list-style: none;
     padding-left: 2ch;
-    margin-bottom: 2em;
 }
 
 ul li {
@@ -205,24 +213,57 @@ header .main {
 }
 
 .meta {
-    color: #999;
+    color: var(--light-gray);
     letter-spacing: -0.5px;
     font-size: 0.8em;
 }
 
 .meta a {
-    color: #999;
+    color: var(--light-gray);
     text-decoration: underline;
 }
 
 .page-link {
     color: var(--fg);
-    border: 2px solid var(--dark-blue);
+    border: 2px solid var(--green);
     padding: 2px 5px;
 }
 
 .page-link:hover {
-    border: 2px solid var(--dark-blue);
+}
+
+.page-item a {
+    /* font-size: 0.8em; */
+    margin-top: 2em;
+    color: var(--fg);
+    border: 2px solid var(--green);
+    padding: 2px 5px;
+}
+
+.page-nav:hover {
+    color: var(--fg);
+}
+
+details {
+    margin-bottom: 1em;
+    /*     background: var(--light-purple); */
+    /*     border: 1px dashed var(--light-gray); */
+}
+
+details summary {
+    font-size: var(--h3-size);
+    list-style-type: '→ ';
+    color: var(--blue);
+}
+
+details summary:hover {
+    background-color: var(--yellow);
+    color: var(--fg);
+}
+
+details[open] summary {
+    color: var(--dark-blue);
+    list-style-type: '↴ ';
 }
 
 /* Footer */
@@ -272,7 +313,7 @@ article .title {
 }
 
 .post-tags {
-    /* margin-left: 1em; */
+    margin-bottom: 1em;
 }
 
 .tag {

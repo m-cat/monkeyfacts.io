@@ -21,15 +21,18 @@
 			{{ .Content }}
 		</section>
 
-		<div class="post-tags">
-			{{ if ne .Type "page" }}
-			{{ if gt .Params.tags 0 }}
-			{{ range .Params.tags }}
-			<a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-			{{ end }}
-			{{ end }}
-			{{ end }}
-		</div>
+        {{ if isset .Params "link" }}
+        <h2>More Info</h2>
+        <ul>
+            <li><a href="{{ .Params.link }}">{{ .Params.link }}</a></li>
+        </ul>
+        {{ end }}
+
+        <br>
+
+        {{ partial "related.html" . }}
+        {{ partial "post-tags.html" . }}
+
 	</article>
 </main>
 {{ end }}

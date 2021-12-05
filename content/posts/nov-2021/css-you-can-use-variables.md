@@ -4,6 +4,7 @@ date: 2021-11-28T22:01:48-06:00
 tags:
   - web
   - css
+link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 ---
 
 CSS now supports variables.
@@ -20,7 +21,3 @@ CSS now supports variables.
   color: #fff;
 }
 ```
-
-## See Also
-
-- [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)

@@ -5,6 +5,8 @@ tags:
   - emacs
   - web
   - html
+rating: 3
+link: https://web-mode.org/
 ---
 
 ## Config
@@ -24,7 +26,3 @@ tags:
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 ```
-
-## See also
-
-- https://web-mode.org/

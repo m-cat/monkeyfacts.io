@@ -6,7 +6,7 @@
 			{{ partial "head.html" . }}
 
 			{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-			
+
 			<main class="list">
 				<div class="site-description">
 					{{- if isset .Site.Params "subtitle" -}}
@@ -17,9 +17,7 @@
                 <ul class="posts">
 				    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 				    {{ range $paginator.Pages }}
-		            <li class="post">
-			            <a href="{{ .RelPermalink }}">{{.Title}}</a> <span class="meta">{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</span>
-		            </li>
+		            {{ partial "post-link.html" . }}
 				    <!-- <section class="list-item"> -->
 					    <!--     <h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1> -->
                         <!--     {{ if .Date }} -->
@@ -36,6 +34,7 @@
 				        <!-- </section> -->
 				    {{ end }}
                 </ul>
+                <br>
 				{{ template "partials/paginator.html" . }}
 			</main>
 			{{ partial "footer.html" . }}

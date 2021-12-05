@@ -17,6 +17,16 @@ rssLimit = 100
 [permalinks]
   posts = '/:title/'
 
+# Related Content
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+[[related.indices]]
+  name = 'tags'
+  weight = 100
+
 # Footer links
 
 [[params.social]]
