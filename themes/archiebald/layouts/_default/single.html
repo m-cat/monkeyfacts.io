@@ -4,16 +4,17 @@
 		<div class="title">
 			<h1 class="title">{{ .Title }}</h1>
             {{ if .Date }}
-			<div class="meta">Posted on {{ dateFormat "Jan 2, 2006" .Date }}</div>
+			<div class="meta">Posted on <a href="/{{ .Page.Dir }}" >{{ dateFormat "Jan 2, 2006" .Date }}</a></div>
             {{ end }}
             {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}
 		</div>
 
 		{{ if isset .Params "tldr" }}
 		<div class="tldr">
-			<strong>tl;dr:</strong>
-			{{ .Params.tldr }}
+		    <strong>tl;dr:</strong>
+		    {{ .Params.tldr }}
 		</div>
+
         {{ end }}
 
 		<section class="body">

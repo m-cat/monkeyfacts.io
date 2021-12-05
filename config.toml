@@ -12,7 +12,10 @@ rssLimit = 100
 	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
 	subtitle = '"Monkey See, Monkey Do"'
 	customcss = ["css/syntax.css"]
-    favicon = "favicon.ico"
+    favicon = "/favicon.ico"
+
+[permalinks]
+  posts = '/:title/'
 
 # Footer links
 
@@ -39,23 +42,23 @@ url = "/index.xml"
 # Main menu Items
 
 [[menu.main]]
-name = "Home"
-url = "/"
+name = "Tags"
+url = "/tags"
 weight = 1
+
+[[menu.main]]
+name = "Top"
+url = "/top"
+weight = 2
 
 [[menu.main]]
 name = "All"
 url = "/posts"
-weight = 2
+weight = 3
 
 [[menu.main]]
 name = "About"
 url = "/about"
-weight = 3
-
-[[menu.main]]
-name = "Tags"
-url = "/tags"
 weight = 4
 
 # Other config

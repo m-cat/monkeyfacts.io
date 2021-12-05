@@ -210,6 +210,11 @@ header .main {
     font-size: 0.8em;
 }
 
+.meta a {
+    color: #999;
+    text-decoration: underline;
+}
+
 .page-link {
     color: var(--fg);
     border: 2px solid var(--dark-blue);
@@ -287,6 +292,7 @@ article .title {
 
 .feather {
     max-height: 14px;
+    color: var(--purple);
 }
 
 .soc {
@@ -295,10 +301,6 @@ article .title {
 
 .soc:hover {
     color: var(--fg);
-}
-
-.feather {
-    color: var(--purple);
 }
 
 .keep-together {
