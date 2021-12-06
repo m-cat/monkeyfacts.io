@@ -1,38 +1,36 @@
 {{ define "main" }}
-<main>
-	<article>
-		<div class="title">
-			<h1 class="title">{{ .Title }}</h1>
-            {{ if .Date }}
-			<div class="meta">Posted on <a href="/{{ .Page.Dir }}" >{{ dateFormat "Jan 2, 2006" .Date }}</a></div>
-            {{ end }}
-            {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}
-		</div>
-
-		{{ if isset .Params "tldr" }}
-		<div class="tldr">
-		    <strong>tl;dr:</strong>
-		    {{ .Params.tldr }}
-		</div>
-
+<article>
+	<div class="title-container">
+		<h1 class="title">{{ .Title }}</h1>
+        {{ if .Date }}
+		<div class="meta">Posted on <a href="/{{ .Page.Dir }}" >{{ dateFormat "Jan 2, 2006" .Date }}</a></div>
         {{ end }}
+        {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}
+	</div>
 
-		<section class="body">
-			{{ .Content }}
-		</section>
+	{{ if isset .Params "tldr" }}
+	<div class="tldr">
+		<strong>tl;dr:</strong>
+		{{ .Params.tldr }}
+	</div>
 
-        {{ if isset .Params "link" }}
-        <h2>More Info</h2>
+    {{ end }}
+
+	<section class="single-body">
+		{{ .Content }}
+	</section>
+
+    {{ if isset .Params "link" }}
+    <details>
+        <summary>More Info</summary>
         <ul>
             <li><a href="{{ .Params.link }}">{{ .Params.link }}</a></li>
         </ul>
-        {{ end }}
+    </details>
+    {{ end }}
 
-        <br>
+    {{ partial "related.html" . }}
+    {{ partial "post-tags.html" . }}
 
-        {{ partial "related.html" . }}
-        {{ partial "post-tags.html" . }}
-
-	</article>
-</main>
+</article>
 {{ end }}

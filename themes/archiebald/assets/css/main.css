@@ -2,6 +2,9 @@
 :root {
     --spacing-unit: 30px;
     --spacing-unit-x2: 60px;
+    --default-size: 17px;
+    --mobile-size: 15px;
+    --small-size: 0.9em;
     --h1-size: 2rem;
     --h2-size: 1.6rem;
     --h3-size: 1.2rem;
@@ -27,7 +30,7 @@
 html {
     color: var(--fg);
     font-family: 'Roboto Mono', monospace;
-    font-size: 17px;
+    font-size: var(--default-size);
     line-height: 1.6em;
 }
 
@@ -39,7 +42,7 @@ html {
 
 @media screen and (max-width: 600px) {
     html {
-        font-size: 15px;
+        font-size: var(--mobile-size);
     }
 
     .monkey {
@@ -49,8 +52,8 @@ html {
 }
 
 body {
-    display: block;
-    margin: 8px;
+    margin: 0;
+    padding: 0;
 }
 
 * {
@@ -103,6 +106,7 @@ blockquote {
     border-left: 2px solid var(--red);
     color: #737373;
     margin: 0;
+    margin-left: 1em;
     padding-left: 1em;
 }
 
@@ -118,6 +122,7 @@ a:hover {
 }
 
 ul {
+    margin-bottom: 0;
     list-style: none;
     padding-left: 2ch;
 }
@@ -181,8 +186,16 @@ a:hover .only-hover {
 }
 
 /* Containers */
+
+main {
+    flex: 1;
+}
+
 .content {
-    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100.1vh;
+
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
@@ -190,7 +203,16 @@ a:hover .only-hover {
     word-wrap: break-word;
 }
 
+.title-container {
+    margin-bottom: 1.5em;
+}
+
+.single-body {
+    margin-bottom: 2em;
+}
+
 /* Header */
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -246,14 +268,15 @@ header .main {
 
 details {
     margin-bottom: 1em;
-    /*     background: var(--light-purple); */
-    /*     border: 1px dashed var(--light-gray); */
 }
 
 details summary {
-    font-size: var(--h3-size);
     list-style-type: '→ ';
     color: var(--blue);
+}
+
+details > ul {
+    margin-left: 1em;
 }
 
 details summary:hover {
@@ -268,14 +291,10 @@ details[open] summary {
 
 /* Footer */
 footer {
-    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 /* Common */
-
-.title h1 {
-    margin-bottom: 0;
-}
 
 time {
     color: grey;
@@ -320,7 +339,7 @@ article .title {
     color: var(--green);
     margin: 2px 5px;
     letter-spacing: -0.5px;
-    /* font-size: 0.8em; */
+    font-size: var(--small-size);
 }
 
 .tag::before {
@@ -365,13 +384,13 @@ article .title {
 code {
     background-color: var(--light-purple);
     padding: 0.1em 0.2em;
-    font-size: 0.9em;
+    font-size: var(--small-size);
 }
 
 pre {
     border-radius: 5px;
     background-color: #ececec;
-    font-size: 0.9em;
+    font-size: var(--small-size);
     line-height: 1.2;
     overflow-x: auto;
     padding: 1em;
