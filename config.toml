@@ -1,7 +1,6 @@
 baseURL = 'https://monkeyfacts.io/'
 languageCode = 'en-us'
 title = 'Monkey Facts'
-theme = "archiebald"
 copyright = "© Marcin S."
 
 paginate = 10 # articles per page
