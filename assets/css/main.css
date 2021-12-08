@@ -242,7 +242,6 @@ header .main {
 
 .meta a {
     color: var(--light-gray);
-    text-decoration: underline;
 }
 
 .page-link {
