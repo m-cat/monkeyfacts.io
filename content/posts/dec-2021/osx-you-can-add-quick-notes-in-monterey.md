@@ -1,6 +1,7 @@
 ---
 title: "OSX: You Can Add Quick Notes in Monterey"
 date: 2021-12-06T11:51:29-06:00
+number: 49
 tags:
   - osx
   - shortcuts

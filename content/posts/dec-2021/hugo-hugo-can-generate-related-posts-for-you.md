@@ -1,6 +1,7 @@
 ---
 title: "Hugo: Hugo Can Generate Related Posts for You"
 date: 2021-12-04T21:43:39-06:00
+number: 44
 tags:
   - hugo
 rating: 6

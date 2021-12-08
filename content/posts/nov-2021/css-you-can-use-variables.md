@@ -1,9 +1,11 @@
 ---
 title: "CSS: You Can Now Use Variables"
 date: 2021-11-28T22:01:48-06:00
+number: 29
 tags:
   - web
   - css
+rating: 6
 link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 ---
 

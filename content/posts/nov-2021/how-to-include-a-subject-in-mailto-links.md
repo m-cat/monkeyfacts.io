@@ -1,8 +1,10 @@
 ---
 title: "How to Include a Subject in mailto: Links"
 date: 2021-11-29T17:12:44-06:00
+number: 31
 tags:
   - web
+rating: 7
 ---
 
 You can include a subject in a `mailto:` link by adding it as a query parameter:

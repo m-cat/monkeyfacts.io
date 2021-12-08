@@ -1,10 +1,11 @@
 ---
 title: "Apocrypha: Why People Before the Flood Lived Less Than 1000 Years"
 date: 2021-12-04T21:49:40-06:00
+number: 46
 tags:
   - religion
   - apocrypha
-rating: 9
+rating: 8
 link: https://www.biblegateway.com/passage/?search=2+pet+3%3A8&version=KJV
 ---
 

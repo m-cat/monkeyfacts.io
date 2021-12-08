@@ -1,6 +1,7 @@
 ---
 title: "CSS: How to Change the Details Summary Arrow"
 date: 2021-12-04T21:45:29-06:00
+number: 45
 tags:
   - web
   - css

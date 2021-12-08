@@ -1,8 +1,10 @@
 ---
 title: "Javascript: `Object.assign` Modifies an Object in Place"
 date: 2021-11-25
+number: 22
 tags:
   - javascript
+rating: 5
 ---
 
 `Object.assign` is similar to using the spread operator `...`, but it allows you

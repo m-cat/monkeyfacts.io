@@ -1,8 +1,10 @@
 ---
 title: "Git: Globally Ignore Files"
 date: 2021-11-17
+number: 4
 tags:
   - git
+rating: 7
 link: https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files#configuring-ignored-files-for-all-repositories-on-your-computer
 ---
 

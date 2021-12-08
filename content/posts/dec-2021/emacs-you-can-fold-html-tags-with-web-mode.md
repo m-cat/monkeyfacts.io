@@ -1,6 +1,7 @@
 ---
 title: "Emacs: You Can Fold HTML Tags With web-mode"
 date: 2021-12-01T11:45:51-06:00
+number: 38
 tags:
   - emacs
   - web

@@ -1,6 +1,7 @@
 ---
 title: "Javascript: How to Make Custom Errors"
 date: 2021-12-02T19:31:23-06:00
+number: 41
 tags:
   - javascript
 rating: 4

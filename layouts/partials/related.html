@@ -5,7 +5,7 @@
     <!-- <h2>Related Facts</h2> -->
     <ul>
 	    {{ range . }}
-	    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	    {{ partial "post-link.html" . }}
 	    {{ end }}
     </ul>
 </details>
