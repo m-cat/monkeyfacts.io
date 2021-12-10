@@ -5,7 +5,7 @@
 {{ end }}
 
 <ul class="posts">
-	{{- range .Data.Pages -}}
+	{{- range (.Data.Pages.ByParam "number").Reverse -}}
 	{{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
 	{{ partial "post-link.html" . }}
 	{{- end -}}

@@ -1,7 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-number: {{ $min := 1 }}{{ range where .Site.Pages "Type" "posts" }}{{ $min = (add $min 1) }}{{ end }}{{ $min }}
+number: {{ $number := 1 }}{{ range where .Site.Pages "Type" "posts" }}{{ $number = (add $number 1) }}{{ end }}{{ $number }}
+aliases: ["/{{ $number }}"]
 tags: [XXX]
 rating: XXX
 ---

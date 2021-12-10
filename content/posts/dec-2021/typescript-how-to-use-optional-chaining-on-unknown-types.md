@@ -1,12 +1,14 @@
 ---
 title: "Typescript: How to Use Optional Chaining on Unknown Types"
-date: 2021-12-06T11:57:17-06:00
+date: 2021-12-06T17:57:17.000Z
 number: 51
 tags:
   - typescript
   - javascript
 rating: 3
 link: https://github.com/microsoft/TypeScript/issues/37700#issuecomment-940865298
+aliases:
+  - /51
 ---
 
 Typescript does not currently support optional chaining on unknown types. You will need to use a hack such as the one [here](https://github.com/microsoft/TypeScript/issues/37700#issuecomment-940865298).

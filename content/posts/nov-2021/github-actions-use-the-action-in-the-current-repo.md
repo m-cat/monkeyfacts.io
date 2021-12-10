@@ -1,11 +1,13 @@
 ---
 title: "Github Actions: Use the Action in the Current Repo"
-date: 2021-11-30T18:12:28-06:00
+date: 2021-12-01T00:12:28.000Z
 number: 34
 tags:
   - ci
   - github
 rating: 3
+aliases:
+  - /34
 ---
 
 If you're developing a GitHub Action and you want to run the action on itself,

@@ -1,6 +1,6 @@
 ---
 title: "Emacs: You Can Highlight Matching HTML Tags With web-mode"
-date: 2021-11-30T19:35:27-06:00
+date: 2021-12-01T01:35:27.000Z
 number: 35
 tags:
   - emacs
@@ -8,6 +8,8 @@ tags:
   - html
 rating: 3
 link: https://web-mode.org/
+aliases:
+  - /35
 ---
 
 ## Config
