@@ -21,11 +21,13 @@
 	</section>
 
     {{ if isset .Params "link" }}
-    <details>
+    <details open>
         <summary>More Info</summary>
-        <ul>
-            <li><a href="{{ .Params.link }}">{{ .Params.link }}</a></li>
-        </ul>
+        <div class="details-contents">
+            <ul class="more-info-list">
+                <li><a href="{{ .Params.link }}">{{ .Params.link }}</a></li>
+            </ul>
+        </div>
     </details>
     {{ end }}
 

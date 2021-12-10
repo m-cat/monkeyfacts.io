@@ -265,6 +265,10 @@ header .main {
     color: var(--fg);
 }
 
+.details-contents {
+    border-left: 2px dashed var(--light-gray);
+}
+
 /* Related Facts */
 
 details {
@@ -274,10 +278,6 @@ details {
 details summary {
     list-style-type: '→ ';
     color: var(--blue);
-}
-
-details > ul {
-    margin-left: 1em;
 }
 
 details summary:hover {
@@ -291,6 +291,10 @@ details[open] summary {
 }
 
 .related-more {
+    margin-left: 1em;
+}
+
+.related-facts-list, .related-facts-more, .more-info-list {
     margin-left: 1em;
 }
 

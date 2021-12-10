@@ -1,23 +1,25 @@
 {{ $related := .Site.RegularPages.Related . }}
-{{ with $related }}
+{{ with ($related.ByParam "rating").Reverse }}
 <details>
     <summary>Related Facts</summary>
-    <ul>
-	    {{ range . | first 5 }}
-	    {{ partial "post-link.html" . }}
-	    {{ end }}
-    </ul>
-
-    {{ $rest := . | after 5 }}
-    {{ with $rest }}
-    <details class="related-more">
-        <summary>more...</summary>
-        <ul>
-	        {{ range . }}
+    <div class="details-contents">
+        <ul class="related-facts-list">
+	        {{ range . | first 5 }}
 	        {{ partial "post-link.html" . }}
 	        {{ end }}
         </ul>
-    </details>
-    {{end}}
+
+        {{ $rest := . | after 5 }}
+        {{ with $rest }}
+        <details class="related-more">
+            <summary>more...</summary>
+            <ul class="related-facts-more">
+	            {{ range . }}
+	            {{ partial "post-link.html" . }}
+	            {{ end }}
+            </ul>
+        </details>
+        {{end}}
+    </div>
 </details>
 {{ end }}
