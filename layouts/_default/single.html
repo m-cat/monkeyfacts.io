@@ -2,10 +2,13 @@
 <article>
 	<div class="title-container">
 	    <h1 class="title">{{ .Title }}</h1>
-        {{ if .Date }}
-        {{ partial "post-meta.html" . }}
+
+        {{ if eq .Type "posts" }}
+        <div class="meta-single-container">
+            <div><span class="rating-text">Rating: </span>{{ partial "rating.html" . }}</div>
+            <div style="text-align: right;">{{ partial "post-meta.html" . }}</div>
+        </div>
         {{ end }}
-        {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}
 	</div>
 
 	{{ if isset .Params "tldr" }}

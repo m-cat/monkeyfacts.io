@@ -2,7 +2,9 @@
   {{ if isset .Params "number" }}
   <a href="/{{ .Params.number }}"><span class="post-number">[#{{ .Params.number }}]</span></a>
   {{ end }}
+
   <a href="/{{ .File.Dir }}" >{{ dateFormat "Jan 2, 2006" .Date }}</a>
+
   {{ if .Draft }}
   <span class="draft-label">DRAFT</span>
   {{ end }}

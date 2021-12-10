@@ -1,0 +1,13 @@
+{{ if isset .Data "Term" }}
+<h1>{{ .Data.Term }}</h1>
+{{ else }}
+<h1 class="page-title">{{ .Title }}</h1>
+{{ end }}
+
+<ul class="posts">
+	{{- range (.Data.Pages.ByParam "rating").Reverse -}}
+	{{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
+	{{ partial "post-link.html" . }}
+	{{- end -}}
+	{{- end -}}
+</ul>
