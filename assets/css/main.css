@@ -265,6 +265,8 @@ header .main {
     color: var(--fg);
 }
 
+/* Related Facts */
+
 details {
     margin-bottom: 1em;
 }
@@ -286,6 +288,14 @@ details summary:hover {
 details[open] summary {
     color: var(--dark-blue);
     list-style-type: '↴ ';
+}
+
+.related-more {
+    margin-left: 1em;
+}
+
+.related-more summary {
+    font-size: var(--small-size);
 }
 
 /* Footer */

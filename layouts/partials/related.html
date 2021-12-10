@@ -1,11 +1,23 @@
-{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ $related := .Site.RegularPages.Related . }}
 {{ with $related }}
 <details>
     <summary>Related Facts</summary>
     <ul>
-	    {{ range . }}
+	    {{ range . | first 5 }}
 	    {{ partial "post-link.html" . }}
 	    {{ end }}
     </ul>
+
+    {{ $rest := . | after 5 }}
+    {{ with $rest }}
+    <details class="related-more">
+        <summary>more...</summary>
+        <ul>
+	        {{ range . }}
+	        {{ partial "post-link.html" . }}
+	        {{ end }}
+        </ul>
+    </details>
+    {{end}}
 </details>
 {{ end }}
