@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title }}</h1>
+
+{{ $pages := where (.Site.RegularPages.ByParam "rating").Reverse "Type" "in" .Site.Params.mainSections }}
+<ul class="posts">
+    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+    {{ range $paginator.Pages }}
+	{{ partial "post-link.html" . }}
+	{{ end }}
+</ul>
+
+<br>
+
+{{ template "partials/paginator.html" . }}
+{{ end }}

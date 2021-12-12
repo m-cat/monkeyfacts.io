@@ -18,23 +18,11 @@
 				    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
 				    {{ range $paginator.Pages }}
 		            {{ partial "post-link.html" . }}
-				    <!-- <section class="list-item"> -->
-					    <!--     <h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1> -->
-                        <!--     {{ if .Date }} -->
-					    <!--     <time>{{ dateFormat "Jan 2, 2006" .Date }}</time> -->
-                        <!--     {{ end }} -->
-                        <!--     {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }} -->
-					    <!--     <br> -->
-                        <!--     <div class="description"> -->
-					        <!-- 	    {{ if isset .Params "description" }} -->
-					        <!-- 	    {{ .Description }} -->
-					        <!--         <a href="{{ .RelPermalink }}">Read more ⟶</a> -->
-					        <!-- 	    {{ end }} -->
-					        <!--     </div> -->
-				        <!-- </section> -->
 				    {{ end }}
                 </ul>
+
                 <br>
+
 				{{ template "partials/paginator.html" . }}
 			</main>
 
