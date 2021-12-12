@@ -370,6 +370,7 @@ article .title {
 .site-description {
     display: flex;
     justify-content: space-between;
+    column-gap: 2em;
     font-size: var(--small-size);
     margin-top: 1em;
 }

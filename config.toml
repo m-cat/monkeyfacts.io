@@ -12,7 +12,7 @@ enableRobotsTXT = false
 	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
 	customcss = ["css/syntax.css"]
     favicon = "/favicon.ico"
-    catchphrases = ["Monkey See, Monkey Do", "We're Not Monkeying Around", "This Ain't No Monkey Business", "New Monkey Business Daily"]
+    catchphrases = ["Monkey See, Monkey Do", "We're Not Monkeying Around", "This Ain't No Monkey Business", "New Monkey Business Daily", "A Monkey Wrench In The System"]
 
 [permalinks]
   posts = '/:title/'
