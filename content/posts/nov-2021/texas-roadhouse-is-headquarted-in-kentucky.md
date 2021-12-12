@@ -4,7 +4,7 @@ date: 2021-11-23T00:00:00.000Z
 number: 14
 tags:
   - funny
-rating: 8
+rating: 9
 aliases:
   - /14
 ---
