@@ -4,15 +4,15 @@ title = 'Monkey Facts'
 copyright = "© Marcin S."
 
 paginate = 10 # articles per page
-rssLimit = 100
+rssLimit = 20
 enableRobotsTXT = false
 
 [params]
 	mode = "light" # color-mode → light,dark,toggle or auto
 	useCDN = false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = '"Monkey See, Monkey Do"'
 	customcss = ["css/syntax.css"]
     favicon = "/favicon.ico"
+    catchphrases = ["Monkey See, Monkey Do", "We're Not Monkeying Around", "This Ain't No Monkey Business", "New Monkey Business Daily"]
 
 [permalinks]
   posts = '/:title/'

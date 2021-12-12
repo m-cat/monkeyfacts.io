@@ -7,12 +7,16 @@
 
 			{{ $pages := where (.Site.RegularPages.ByParam "number").Reverse "Type" "in" .Site.Params.mainSections }}
 
+			<div class="site-description">
+				{{- if isset .Site.Params "catchphrases" -}}
+                <i><span id="catchphrase">...</span></i>
+				{{- end -}}
+
+				<span><b>{{ len $pages }} facts</b> <i>and counting!</i></span>
+			</div>
+
 			<main class="list">
-				<div class="site-description">
-					{{- if isset .Site.Params "subtitle" -}}
-					<p><b>{{ len $pages }} facts</b> and counting!</p>
-					{{- end -}}
-				</div>
+                <h1>Latest</h1>
 
                 <ul class="posts">
 				    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
@@ -28,5 +32,13 @@
 
 			{{ partial "footer.html" . }}
 		</div>
+
+        <script>
+         const catchphrases = {{ .Site.Params.catchphrases }};
+         function randomCatchphrase (){
+             document.getElementById("catchphrase").textContent = catchphrases[Math.floor(Math.random() * catchphrases.length)];
+         }
+         randomCatchphrase()
+        </script>
 	</body>
 </html>

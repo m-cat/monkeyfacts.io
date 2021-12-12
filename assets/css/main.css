@@ -138,7 +138,7 @@ ul li {
 ul > li::before {
     content: '- ';
     font-weight: bold;
-    color: var(--red);
+    color: var(--purple);
 }
 
 /* Images */
@@ -267,6 +267,10 @@ header .main {
     grid-template-columns: auto auto;
 }
 
+.meta-date {
+    white-space: nowrap;
+}
+
 .page-link {
     color: var(--fg);
     border: 2px solid var(--green);
@@ -366,6 +370,8 @@ article .title {
 .site-description {
     display: flex;
     justify-content: space-between;
+    font-size: var(--small-size);
+    margin-top: 1em;
 }
 
 .post-tags {
