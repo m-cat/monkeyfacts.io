@@ -1,5 +1,7 @@
 <li class="post">
+    {{ if eq .Type "posts" }}
     {{ partial "rating.html" . }}
+    {{ end }}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ if eq .Type "posts" }}
     {{ partial "post-meta.html" . }}

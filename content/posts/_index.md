@@ -1,4 +1,4 @@
 ---
-title: "All Posts"
+title: "All Facts"
 type: index
 ---
