@@ -1,44 +1,52 @@
-<!DOCTYPE html>
-<html>
-	{{ partial "header.html" . }}
-	<body>
-		<div class="content">
-			{{ partial "head.html" . }}
+{{ define "main" }}
+  {{ $pages := where (.Site.RegularPages.ByParam "number").Reverse "Type" "in" .Site.Params.mainSections }}
 
-			{{ $pages := where (.Site.RegularPages.ByParam "number").Reverse "Type" "in" .Site.Params.mainSections }}
+  <div class="site-description">
+      {{- if isset .Site.Params "catchphrases" -}}
+      <i><span id="catchphrase">...</span></i>
+      {{- end -}}
 
-			<div class="site-description">
-				{{- if isset .Site.Params "catchphrases" -}}
-                <i><span id="catchphrase">...</span></i>
-				{{- end -}}
+      <span><b>{{ len $pages }} facts</b> <i>and counting!</i></span>
+  </div>
 
-				<span><b>{{ len $pages }} facts</b> <i>and counting!</i></span>
-			</div>
+  <h1>Latest</h1>
 
-			<main class="list">
-                <h1>Latest</h1>
+  {{ $lastdate := 0 }}
+  {{ $setgrouping := 0 }}
+  <ul class="posts date-grouping">
+      {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+      {{ range $paginator.Pages }}
+        {{ if eq $setgrouping 0 }}
+          {{ if eq $lastdate 0 }}
+            {{ $lastdate = dateFormat "Jan 2, 2006" .Date }}
+          {{ end }}
+        {{ end }}
+        {{ if ne (dateFormat "Jan 2, 2006" .Date) $lastdate }}
+          {{ if eq $setgrouping 0 }}
+            </ul></li>
+            <ul class="posts date-grouping-2" style="margin-top: 0;">
+            {{ $setgrouping = 1 }}
+          {{ else }}
+            </ul></li>
+            <ul class="posts date-grouping" style="margin-top: 0;">
+            {{ $setgrouping = 0 }}
+          {{ end }}
+          {{ $lastdate = dateFormat "Jan 2, 2006" .Date }}
+        {{ end }}
+        {{ partial "post-link.html" . }}
+      {{ end }}
+  </ul>
 
-                <ul class="posts">
-				    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-				    {{ range $paginator.Pages }}
-		            {{ partial "post-link.html" . }}
-				    {{ end }}
-                </ul>
+  <br>
 
-                <br>
+  {{ template "partials/paginator.html" . }}
 
-				{{ template "partials/paginator.html" . }}
-			</main>
+  <script>
+   const catchphrases = {{ .Site.Params.catchphrases }};
+   function randomCatchphrase (){
+       document.getElementById("catchphrase").textContent = `"${catchphrases[Math.floor(Math.random() * catchphrases.length)]}"`;
+   }
+   randomCatchphrase()
+  </script>
 
-			{{ partial "footer.html" . }}
-		</div>
-
-        <script>
-         const catchphrases = {{ .Site.Params.catchphrases }};
-         function randomCatchphrase (){
-             document.getElementById("catchphrase").textContent = catchphrases[Math.floor(Math.random() * catchphrases.length)];
-         }
-         randomCatchphrase()
-        </script>
-	</body>
-</html>
+{{ end }}

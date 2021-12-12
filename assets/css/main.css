@@ -13,6 +13,7 @@
     --fg: #232333;
     --red: #e83903;
     --purple: rebeccapurple;
+    --light-blue: #f3f9ff;;
     --blue: #0065e8;
     --dark-blue: #0c0cb7;
     --yellow: #fdfa41;
@@ -289,6 +290,13 @@ header .main {
 
 .page-nav:hover {
     color: var(--fg);
+
+.date-grouping {
+    background-color: var(--light-blue);
+    /* border:1px dashed black; */
+}
+
+.date-grouping-2 {
 }
 
 /* Details contents */
