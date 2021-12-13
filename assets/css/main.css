@@ -21,6 +21,7 @@
     --green: #3cac82;
     --light-gray: #999;
     --gray: #828282;
+    --hover-color: var(--yellow);
     --nimbus-bg: #1a1a1a;
     --nimbus-lightest-green: #8fbc8f;
     --nimbus-red: #d65946;
@@ -121,7 +122,7 @@ a {
 }
 
 a:hover {
-    background-color: var(--yellow);
+    background-color: var(--hover-color);
     color: var(--fg);
 }
 
@@ -242,13 +243,13 @@ header .main {
 /* Meta */
 
 .meta {
-    color: var(--light-gray);
+    color: var(--gray);
     letter-spacing: -0.5px;
     font-size: var(--smaller-size);
 }
 
 .meta a {
-    color: var(--light-gray);
+    color: var(--gray);
 }
 
 .rating {
@@ -278,18 +279,16 @@ header .main {
     padding: 2px 5px;
 }
 
-.page-link:hover {
-}
-
-.page-item a {
+.page-nav {
     margin-top: 2em;
     color: var(--fg);
     border: 2px solid var(--green);
     padding: 2px 5px;
 }
 
-.page-nav:hover {
+.page-nav:hover, .page-link:hover {
     color: var(--fg);
+}
 
 .date-grouping {
     background-color: var(--light-blue);
@@ -317,7 +316,7 @@ details summary {
 }
 
 details summary:hover {
-    background-color: var(--yellow);
+    background-color: var(--hover-color);
     color: var(--fg);
 }
 
@@ -411,11 +410,11 @@ article .title {
     color: var(--purple);
 }
 
-.soc {
+.footer-link {
     color: var(--dark-blue);
 }
 
-.soc:hover {
+.footer-link:hover {
     color: var(--fg);
 }
 

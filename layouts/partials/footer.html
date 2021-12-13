@@ -2,7 +2,7 @@
     <hr>
     {{- range $index, $key := .Site.Params.Social -}}
     <span class="keep-together">
-        &nbsp;<a class="soc" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i>&nbsp;{{ $key.name }}</a>&nbsp;|
+        &nbsp;<a class="footer-link" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i>&nbsp;{{ $key.name }}</a>&nbsp;|
     </span>
     {{- end -}}
     <span class="meta keep-together">
