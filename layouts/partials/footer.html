@@ -1,17 +1,19 @@
 <footer>
     <hr>
-    {{- range $index, $key := .Site.Params.Social -}}
-    <span class="keep-together">
-        &nbsp;<a class="footer-link" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i>&nbsp;{{ $key.name }}</a>&nbsp;|
-    </span>
-    {{- end -}}
-    <span class="meta keep-together">
-        &nbsp;{{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
-    </span>
+    <div class="footer-container">
+        {{- range $index, $key := .Site.Params.Social -}}
+        <span class="keep-together">
+            <a class="footer-link" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i>&nbsp;{{ $key.name }}</a>
+        </span>
+        {{- end -}}
+        <span class="meta keep-together">
+            {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
+        </span>
+    </div>
 </footer>
 
 {{- if (isset .Site.Params "social") -}}
 <script>
-    feather.replace()
+ feather.replace()
 </script>
 {{- end -}}
