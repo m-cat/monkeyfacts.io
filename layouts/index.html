@@ -3,10 +3,10 @@
 
   <div class="site-description">
       {{- if isset .Site.Params "catchphrases" -}}
-      <i><span id="catchphrase">...</span></i>
+      <span><i id="catchphrase">...</i></span>
       {{- end -}}
 
-      <span><b>{{ len $pages }} facts</b> <i>and counting!</i></span>
+      <span style="text-align: right;"><b>{{ len $pages }} facts</b> <i>and counting!</i></span>
   </div>
 
   <h1>Latest</h1>
