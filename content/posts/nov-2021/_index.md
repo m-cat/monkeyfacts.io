@@ -1,5 +1,5 @@
 ---
 title: November 2021
-type: index
+type: month
 number: 1
 ---

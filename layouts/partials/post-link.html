@@ -6,7 +6,7 @@
     {{ if eq .Type "posts" }}
     {{ partial "post-meta.html" . }}
     {{ end }}
-    {{ if eq .Type "index" }}
+    {{ if eq .Type "month" }}
     <span class="meta">({{ len .Data.Pages }})</span>
     {{ end }}
 </li>

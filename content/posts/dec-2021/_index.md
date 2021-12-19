@@ -1,5 +1,5 @@
 ---
 title: December 2021
-type: index
+type: month
 number: 2
 ---
