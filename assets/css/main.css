@@ -352,6 +352,7 @@ details summary:hover {
 
 #related-facts-list,
 /* #related-facts-more-list, */
+#bonus-fact-list,
 #more-info-list {
     margin-left: 1em;
 }

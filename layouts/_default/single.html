@@ -27,6 +27,17 @@
 		{{ .Content }}
 	</section>
 
+    {{ if isset .Params "bonus" }}
+    <details open>
+        <summary>Bonus Fact</summary>
+        <div class="details-contents">
+            <ul id="bonus-fact-list">
+                <li>{{ .Params.bonus }}</li>
+            </ul>
+        </div>
+    </details>
+    {{ end }}
+
     {{ if isset .Params "link" }}
     <details open>
         <summary>More Info</summary>
