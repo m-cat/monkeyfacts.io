@@ -5,6 +5,7 @@
     --default-size: 17px;
     --mobile-size: 15px;
     --large-size: 1.1em;
+    --larger-size: 1.3em;
     --small-size: 0.9em;
     --smaller-size: 0.8em;
     --h1-size: 2rem;
@@ -96,16 +97,11 @@ p {
     line-height: 1.5;
 }
 
-hr {
+.footer-hr {
     border: 0;
     border-top: 3px dotted var(--purple);
     margin-top: 3em;
     margin-bottom: 1em;
-}
-
-.short-hr {
-    margin-left: 1em;
-    margin-right: 1em;
 }
 
 blockquote {
@@ -135,6 +131,7 @@ ul {
 
 ul li {
     text-indent: -2ch;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
@@ -226,7 +223,6 @@ header {
     justify-content: center;
     margin: 1em 0 0 0;
     column-gap: 4em;
-    row-gap: 1em;
 }
 
 @media screen and (min-width: 800px) {
@@ -236,11 +232,14 @@ header {
 }
 
 header .main {
-    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
 }
 
 .main a {
+    font-size: 1.75rem;
     color: var(--dark-blue);
+    padding: 0.5em 0 0.5em 0;
 }
 
 .main a:hover {
@@ -280,15 +279,28 @@ header .main {
     white-space: nowrap;
 }
 
-.page-link-container {
+#page-link-container {
     display: flex;
-    column-gap: 1em;
     align-items: center;
+}
+
+#page-link-nav-container,
+#page-link-search-container {
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 0.75em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .page-link {
     font-size: var(--large-size);
     color: var(--dark-blue);
+    background-color: var(--white);
     padding: 2px 5px;
 }
 
@@ -298,8 +310,21 @@ header .main {
 }
 
 .page-nav {
+    font-size: var(--larger-size);
+    /* font-weight: bold; */
+    border: 1px solid var(--light-gray);
     color: var(--dark-blue);
     padding: 2px 5px;
+}
+
+.page-nav-icon {
+    color: var(--purple);
+    padding: 9px 9px;
+}
+
+.page-nav-icon:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
 }
 
 .page-more {
@@ -312,7 +337,8 @@ header .main {
 
 .date-grouping {
     background-color: var(--light-blue);
-    /* border:1px dashed black; */
+    border-top: 1px dashed var(--gray);
+    border-bottom: 1px dashed var(--gray);
 }
 
 .date-grouping-2 {
@@ -441,7 +467,6 @@ article .title {
     justify-content: space-between;
     column-gap: 2em;
     font-size: var(--small-size);
-    margin-top: 1em;
 }
 
 .post-tags {

@@ -1,8 +1,64 @@
 <header>
 	<div class="main">
-	  <a href="{{ .Site.BaseURL }}"><span class="no-hover" >{{ readFile "static/images/monkey.svg" | safeHTML }}</span><span class="only-hover" >{{ readFile "static/images/monkey2.svg" | safeHTML }}</span>{{ .Site.Title }}</a>
+	    <a href="{{ .Site.BaseURL }}"><span class="no-hover" >{{ readFile "static/images/monkey.svg" | safeHTML }}</span><span class="only-hover" >{{ readFile "static/images/monkey2.svg" | safeHTML }}</span>{{ .Site.Title }}</a>
 	</div>
-	<nav class="page-link-container">
-		{{ range .Site.Menus.main }}<a class="page-link" href="{{ .URL }}">{{ .Name }}</a>{{ end }}
-	</nav>
+
+    <div id="page-link-container">
+	    <nav id="page-link-nav-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="page-nav-icon" viewBox="0 0 16 16" onClick="enterSearch();">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+		    {{ range .Site.Menus.main }}<a class="page-link" href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+            <a class="page-link" onclick="randomFact()" href="javascript:void(0);">random</a>
+	    </nav>
+
+        <div id="page-link-search-container" style="display:none;">
+            <input id="page-link-search-input" type="text" value="" style="width: 202px;" onkeypress="submitSearchEnter(this)" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="page-nav-icon" viewBox="0 0 16 16" onClick="submitSearch();">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="page-nav-icon" viewBox="0 0 16 16" onClick="exitSearch();">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+     const pageLinkNavContainer = document.getElementById("page-link-nav-container");
+     const pageLinkSearchContainer = document.getElementById("page-link-search-container");
+     const pageLinkSearchInput = document.getElementById("page-link-search-input");
+
+     function enterSearch() {
+         pageLinkNavContainer.style.display = "none";
+         pageLinkSearchContainer.style.display = "flex";
+
+         pageLinkSearchInput.focus();
+     }
+
+     function exitSearch() {
+         pageLinkNavContainer.style.display = "flex";
+         pageLinkSearchContainer.style.display = "none";
+     }
+
+     function submitSearch() {
+         const text = pageLinkSearchInput.value;
+
+         if (text) {
+             window.location.replace("https://duckduckgo.com/?q=site:monkeyfacts.io "+text);
+         }
+     }
+
+     function submitSearchEnter(element) {
+         if (event.keyCode == 13) {
+             submitSearch();
+         }
+     }
+
+     function randomFact() {
+         {{ $pages := where (.Site.RegularPages.ByParam "number").Reverse "Type" "in" .Site.Params.mainSections }}
+         const factNumber = Math.floor(Math.random() * {{ len $pages }});
+         window.location.replace(`/${factNumber}`);
+     }
+    </script>
 </header>

@@ -30,17 +30,22 @@ enableRobotsTXT = false
 # Footer links
 
 [[params.social]]
-name = "Blog"
+name = "about"
 icon = "user"
+url = "/about"
+
+[[params.social]]
+name = "blog"
+icon = "code"
 url = "https://bytedude.com"
 
 [[params.social]]
-name = "Email"
+name = "email"
 icon = "mail"
 url = "mailto:marcin@bytedude.com"
 
 [[params.social]]
-name = "GitHub"
+name = "github"
 icon = "github"
 url = "https://github.com/m-cat"
 
@@ -52,24 +57,19 @@ url = "/index.xml"
 # Main menu Items
 
 [[menu.main]]
-name = "Tags"
+name = "tags"
 url = "/tags"
 weight = 1
 
 [[menu.main]]
-name = "Top"
+name = "top"
 url = "/top"
 weight = 2
 
 [[menu.main]]
-name = "All"
+name = "all"
 url = "/posts"
 weight = 3
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 4
 
 # Other config
 

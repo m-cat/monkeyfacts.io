@@ -23,11 +23,11 @@
         {{ end }}
         {{ if ne (dateFormat "Jan 2, 2006" .Date) $lastdate }}
           {{ if eq $setgrouping 0 }}
-            </ul></li>
+            </ul>
             <ul class="posts date-grouping-2" style="margin-top: 0;">
             {{ $setgrouping = 1 }}
           {{ else }}
-            </ul></li>
+            </ul>
             <ul class="posts date-grouping" style="margin-top: 0;">
             {{ $setgrouping = 0 }}
           {{ end }}

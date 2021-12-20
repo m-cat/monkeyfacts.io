@@ -1,12 +1,12 @@
 <footer>
-    <hr>
+    <hr class="footer-hr">
     <div class="footer-container">
         {{- range $index, $key := .Site.Params.Social -}}
         <span class="keep-together">
             <a class="footer-link" href="{{ $key.url }}" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i>&nbsp;{{ $key.name }}</a>
         </span>
         {{- end -}}
-        <span class="meta keep-together">
+        <span class="meta keep-together" style="width: 100%; text-align: center;">
             {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
         </span>
     </div>

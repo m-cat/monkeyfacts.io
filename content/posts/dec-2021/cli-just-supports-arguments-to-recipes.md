@@ -1,5 +1,5 @@
 ---
-title: "CLI: just Recipes Support Arguments"
+title: "CLI: just Supports Arguments to Recipes"
 date: 2021-12-19T11:27:22-06:00
 number: 83
 aliases: ["/83"]
