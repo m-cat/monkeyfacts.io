@@ -6,7 +6,7 @@
 
 {{ $lastdate := 0 }}
 {{ $setgrouping := 0 }}
-<ul class="posts date-grouping">
+<ul class="posts">
 	{{- range (.Data.Pages.ByParam "number").Reverse -}}
 	  {{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
         {{ if eq $setgrouping 0 }}
@@ -17,11 +17,13 @@
         {{ if ne (dateFormat "Jan 2, 2006" .Date) $lastdate }}
           {{ if eq $setgrouping 0 }}
             </ul></li>
-            <ul class="posts date-grouping-2" style="margin-top: 0;">
+            <hr/>
+            <ul class="posts" style="margin-top: 0;">
             {{ $setgrouping = 1 }}
           {{ else }}
             </ul></li>
-            <ul class="posts date-grouping" style="margin-top: 0;">
+            <hr/>
+            <ul class="posts" style="margin-top: 0;">
             {{ $setgrouping = 0 }}
           {{ end }}
           {{ $lastdate = dateFormat "Jan 2, 2006" .Date }}

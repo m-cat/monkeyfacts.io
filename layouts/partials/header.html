@@ -45,7 +45,7 @@
          const text = pageLinkSearchInput.value;
 
          if (text) {
-             window.location.replace("https://duckduckgo.com/?q=site:monkeyfacts.io "+text);
+             window.location.href = "https://duckduckgo.com/?q=site:monkeyfacts.io "+text;
          }
      }
 
@@ -57,8 +57,8 @@
 
      function randomFact() {
          {{ $pages := where (.Site.RegularPages.ByParam "number").Reverse "Type" "in" .Site.Params.mainSections }}
-         const factNumber = Math.floor(Math.random() * {{ len $pages }});
-         window.location.replace(`/${factNumber}`);
+         const factNumber = Math.floor(Math.random() * {{ len $pages }})+1;
+         window.location.href = `/${factNumber}`;
      }
     </script>
 </header>
