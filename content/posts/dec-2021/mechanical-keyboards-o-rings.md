@@ -4,7 +4,7 @@ date: 2021-12-25T17:43:16-05:00
 number: 93
 aliases: ["/93"]
 tags: [keyboards]
-rating: 3
+rating: 5
 ---
 
 In the world of mechanical keyboards, o-rings are used to quiet the sound of
