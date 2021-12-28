@@ -5,7 +5,7 @@
 
         {{ if eq .Type "posts" }}
         <div class="meta-single-container">
-            <div>
+            <div class="rating-{{.Params.rating}}">
                 <span class="meta">Rating: </span>{{ partial "rating.html" . }}
             </div>
             <div style="text-align: right;">

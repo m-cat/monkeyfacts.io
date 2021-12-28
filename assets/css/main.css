@@ -278,6 +278,53 @@ header .main {
     content: "]";
 }
 
+.rating-1 {d
+    opacity: 0.4;
+}
+.rating-2 {
+    opacity: 0.5;
+}
+.rating-3 {
+    opacity: 0.6;
+}
+.rating-4 {
+    opacity: 0.7;
+}
+.rating-5 {
+    opacity: 0.8;
+}
+.rating-6 {
+    opacity: 0.9;
+}
+.rating-7 {
+}
+.rating-8 {
+    /* Blink */
+    -webkit-animation: blinker 1.5s linear infinite;
+    animation: blinker 1.5s linear infinite;
+}
+.rating-9 {
+    /* Wave + blink */
+    -webkit-animation: blinker 1.5s linear infinite;
+    animation: blinker 1.5s linear infinite;
+}
+.rating-10 {
+    /* Sparkle */
+    -webkit-animation: blinker 1.5s linear infinite;
+    animation: blinker 1.5s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+    50% {
+        opacity: 0.5;
+    }
+}
+@keyframes blinker {
+    50% {
+        opacity: 0.5;
+    }
+}
+
 .meta-single-container {
     display: grid;
     grid-template-columns: auto auto;

@@ -1,4 +1,4 @@
-<li class="post">
+<li class="post rating-{{.Params.rating}}">
     {{ if eq .Type "posts" }}
     {{ partial "rating.html" . }}
     {{ end }}
