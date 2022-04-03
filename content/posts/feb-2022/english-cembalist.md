@@ -1,5 +1,5 @@
 ---
-title: "English Cembalist"
+title: "English: Cembalist"
 date: 2022-02-10T18:43:29-06:00
 number: 106
 aliases: ["/106"]
