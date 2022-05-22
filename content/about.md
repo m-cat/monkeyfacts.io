@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "Welcome to Monkey Facts. This is where I post new things that I learn on a daily basis. Most of the facts are technical (I'm a programmer)."
 type: info
 ---
 
