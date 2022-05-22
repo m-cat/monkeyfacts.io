@@ -1,5 +1,6 @@
 {{ if isset .Data "Term" }}
 <h1>{{ .Data.Term }}</h1>
+{{ partial "tag-meta.html" . }}
 {{ else }}
 <h1 class="page-title">{{ .Title }}</h1>
 {{ end }}

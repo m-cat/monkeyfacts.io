@@ -9,6 +9,9 @@ new month fact="":
         hugo new posts/{{month}}/{{fact}}.md
     fi
 
+tag name:
+    hugo new --kind tag tags/{{name}}
+
 build:
     rm -R public
     hugo
