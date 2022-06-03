@@ -1,5 +1,5 @@
 ---
-title: "Osx How to Restart the Touchbar"
+title: "OSX: How to Restart the Touchbar"
 date: 2022-06-02T22:36:49-05:00
 number: 115
 aliases: ["/115"]
