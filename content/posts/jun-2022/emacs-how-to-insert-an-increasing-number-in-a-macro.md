@@ -1,5 +1,5 @@
 ---
-title: "Emacs How to Insert an Increasing Number in a Macro"
+title: "Emacs: How to Insert an Increasing Number in a Macro"
 date: 2022-06-04T22:33:19-05:00
 number: 116
 aliases: ["/116"]
