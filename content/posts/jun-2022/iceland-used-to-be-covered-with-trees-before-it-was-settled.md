@@ -5,6 +5,6 @@ date: 2022-06-21T19:19:32Z
 number: 127
 aliases: ["/127"]
 # just tag "XXX XXX"
-tags: [geography, nature]
+tags: [geography, nature, travel]
 rating: 9
 ---
