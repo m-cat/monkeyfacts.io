@@ -6,6 +6,6 @@ number: 130
 aliases: ["/130"]
 # just tag "XXX XXX"
 tags: [rust]
-rating: 7
+rating: 4
 link: https://threadreaderapp.com/thread/1539661689880137728.html
 ---
