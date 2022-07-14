@@ -4,7 +4,6 @@ date: 2021-12-05T03:49:40.000Z
 number: 46
 tags:
   - religion
-  - apocrypha
 rating: 8
 link: https://www.biblegateway.com/passage/?search=2+pet+3%3A8&version=KJV
 aliases:
