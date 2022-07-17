@@ -7,7 +7,7 @@ aliases: ["/152"]
 # just tag "XXX XXX"
 tags: [religion]
 rating: 6
-link: https://en.m.wikipedia.org/wiki/Abgar_Legend
+link: https://en.wikipedia.org/wiki/Abgar_Legend
 ---
 
 > The Abgar Legend is a set of letters that claim to be a correspondence
