@@ -13,7 +13,7 @@ aliases:
 If you're developing a GitHub Action and you want to run the action on itself,
 you can do `uses: ./` to use the action in the current repo.
 
-## Example:
+## Example
 
 ```yaml
 name: Pull Request
