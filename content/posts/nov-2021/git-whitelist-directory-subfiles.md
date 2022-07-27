@@ -27,6 +27,6 @@ But when I tried to whitelist a subfile of a directory it didn't work. That's
 because you need to add `!*/`:
 
 ```ini
-!*/
+!*/var
 !var/mc-list.el
 ```
