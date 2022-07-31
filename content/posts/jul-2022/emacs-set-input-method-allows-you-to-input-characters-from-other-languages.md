@@ -6,5 +6,5 @@ number: 163
 aliases: ["/163"]
 # just tag "XXX XXX"
 tags: [emacs, language]
-rating: 5
+rating: 6
 ---
